@@ -9,15 +9,30 @@
 
 }
 
-/* Header Section */
+/* scoll bar */
+body::-webkit-scrollbar {
+  width: 0.8em;
+  background: #305dff02;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #fdae04;
+}
+ 
+body::-webkit-scrollbar-track {
+  background-color: #f5f5f500;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--main-color); /* Dark background color for the whole page */
-    color: #ffffff; /* Text color for the whole page */
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--main-color); /* Dark background color for the whole page */
+  color: #ffffff; /* Text color for the whole page */
+}
+
+/* Header Section */
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -64,9 +79,10 @@ body {
 /* Hero Section */
 .hero {
     background-image: url('/images/kenashika_A_photo-realistic_image_of_a_black_hip-hop_artist_set_3739aa16-ce2f-4a88-b47c-f6c69a7c536d.png');
-    background-position: 50%;
+    background-position: 60%;
+    background-repeat: no-repeat;
     color: #ffffff; /* Text color for the hero content */
-    padding: 15rem 0;
+    padding: 10rem 0;
   }
   
   .container {
@@ -85,6 +101,7 @@ body {
   .hero-text {
     max-width: 500px;
     flex: 1;
+    letter-spacing: 0.1rem;
   }
 
   .hero-gradient{
@@ -118,13 +135,15 @@ body {
   }
   
   .hero-heading {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
   }
   
   .hero-description {
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-bottom: 40px;
+    line-height: 2rem;
+    letter-spacing: 0.2rem;
   }
   
   .cta-button{
@@ -157,7 +176,7 @@ body {
   /* Music Section */
 .music {
     background-color: #1135516b; /* Dark background color for the music section */
-    padding: 40px 0;
+    padding: 20rem 0;
   }
   
   .container {
@@ -169,7 +188,6 @@ body {
   .section-heading {
     color: #ffffff; /* Text color for the section heading */
     text-align: center;
-    font-size: 24px;
     margin-bottom: 30px;
   }
   
@@ -180,10 +198,11 @@ body {
   }
   
   .track-card {
-    background-color: #121212; /* Darker background color for track cards */
+    background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.658),rgba(0, 0, 0, 0.658)),url('/images/kenashika_A_dynamic_logo_for_a_hip-hop_music_website_incorporat_4d4c481f-3714-45ed-8172-4a2d9f2d3626.png');
+    background-size: cover;
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 1rem;
   }
   
   .track-card img {
@@ -199,7 +218,7 @@ body {
   
   .track-card p {
     color: #bfbfbf; /* Text color for artist names */
-    font-size: 14px;
+    font-size: 1rem;
     margin-top: 5px;
   }
   
@@ -710,6 +729,7 @@ body {
     
       .hero-image img {
         margin-top: 20px;
+        background-image: -webkit-linear-gradient(0deg, black, black), url('/images/kenashika_A_photo-realistic_image_of_a_black_hip-hop_artist_set_3739aa16-ce2f-4a88-b47c-f6c69a7c536d.png');
       }
 
     /* music cards */

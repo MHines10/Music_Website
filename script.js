@@ -79,4 +79,4 @@ document.addEventListener("mousemove", (event) => {
   }
 });
 
-player.src = "/music/Por_Favor_Mi_Amor.mp3";
+player.src = "/music/Por_Favor_Mi_Amor.mp3", "/music/Bad_Bunny_Tití_Me_Preguntó_Video_Oficial___Un_.mp3";

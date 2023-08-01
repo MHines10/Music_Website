@@ -112,7 +112,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: animatedGradient 1s infinite alternate !important;
+  animation: animatedGradient 1s infinite alternate;
 }
 
 /* Animated Hero Gradient */
@@ -149,54 +149,116 @@ body {
   letter-spacing: 0.2rem;
 }
 
-.cta-button {
-  display: inline-block;
-  border-radius: 0.25rem;
-  text-transform: uppercase;
-  font-style: normal;
-  font-weight: 400;
-  padding-left: 25px;
-  padding-right: 25px;
+.hero-button,
+.hero-button::after {
+  padding: 16px 20px;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%,#ff822e );
+  border: 0;
   color: #fff;
-  -webkit-clip-path: polygon(
-    0 0,
-    0 0,
-    100% 0,
-    100% 0,
-    100% calc(100% - 15px),
-    calc(100% - 15px) 100%,
-    15px 100%,
-    0 100%
-  );
-  clip-path: polygon(
-    0 0,
-    0 0,
-    100% 0,
-    100% 0,
-    100% calc(100% - 15px),
-    calc(100% - 15px) 100%,
-    15px 100%,
-    0 100%
-  );
-  height: 0px;
-  font-size: 0.7rem;
-  line-height: 14px;
-  letter-spacing: 1.2px;
-  transition: 0.2s 0.1s;
-  background-image: linear-gradient(90deg, #fdb004, #fb2020);
-  border: 0 solid;
-  overflow: hidden;
+  letter-spacing: 3px;
+  line-height: 1;
+  box-shadow: 6px 0px 0px #006eff;
+  outline: transparent;
+  position: relative;
 }
 
-.cta-button:hover {
+.hero-button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "Explore";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    #ff013c 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+.hero-button:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+/* .hero-.:hover {
   background-image: linear-gradient(
     90deg,
     #fb2020,
     #fdb004
   ); /* CTA button background color on hover */
-  cursor: pointer;
+/* cursor: pointer;
   transition: background-color 1s ease;
-}
+} */
 
 /* Music Section */
 .music {
@@ -260,7 +322,7 @@ body {
   margin-top: 20px;
 }
 
-.cta-button {
+.music-button {
   display: block;
   border-radius: 0.25rem;
   text-transform: uppercase;
@@ -300,7 +362,7 @@ body {
   overflow: hidden;
 }
 
-.cta-button:hover {
+.music-button:hover {
   background-color: #ff7700; /* CTA button background color on hover */
 }
 
@@ -414,9 +476,6 @@ body {
   cursor: pointer;
 }
 
-
-
-
 /* Beats Section */
 .beats {
   background-color: #1135516b; /* Dark background color for the beats section */
@@ -469,7 +528,7 @@ body {
   margin-top: 5px;
 }
 
-.cta-button {
+.beats-button {
   display: block;
   text-align: center;
   background-color: #ff5500; /* CTA button background color */
@@ -482,12 +541,9 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
+.beats-button:hover {
   background-color: #ff7700; /* CTA button background color on hover */
 }
-
-
-
 
 /* About Section */
 .about {
@@ -496,13 +552,13 @@ body {
 }
 
 .about-container {
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 0.2fr 1fr; 
-  gap: 0px 20px; 
-  grid-template-areas: 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  gap: 0px 20px;
+  grid-template-areas:
     "header header header"
-    "img bio bio"; 
+    "img bio bio";
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -520,7 +576,6 @@ body {
   font-size: 1.5rem;
   line-height: 1.6;
   grid-area: bio;
-
 }
 
 .artist-image img {
@@ -773,8 +828,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-   /* about section */
-   .artist-bio {
+  /* about section */
+  .artist-bio {
     font-size: 20px;
   }
 
@@ -825,24 +880,22 @@ body {
 
   /* beat cards */
   .beat-cards {
-    
   }
 
   /* about section */
 
   .about-container {
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.1fr 0.1fr 0.1fr; 
-    gap: 10px 0px; 
-    grid-template-areas: 
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr;
+    gap: 10px 0px;
+    grid-template-areas:
       "header header header"
       "img img img"
-      "bio bio bio"; 
+      "bio bio bio";
   }
 
-  
   .artist-bio {
     grid-area: bio;
     justify-content: center;

@@ -81,6 +81,8 @@ body {
   background-repeat: no-repeat;
   color: #ffffff; /* Text color for the hero content */
   padding: 10rem 0;
+  position: relative;
+  z-index: -1;
 }
 
 .hero-container {
@@ -96,10 +98,25 @@ body {
   flex-wrap: wrap;
 }
 
+.hero-img{
+  display: none;
+  width: 100%;
+  height: 110%;
+  background: #000000;
+  opacity: 0.7;
+  position: absolute;
+
+}
+
 .hero-text {
   max-width: 500px;
   flex: 1;
   letter-spacing: 0.1rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .hero-gradient {
@@ -819,8 +836,19 @@ body {
 
 /* Styles for responsiveness */
 @media screen and (max-width: 1024px) {
+
+  .hero-img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    opacity: 0.7;
+    position: absolute;
+  }
+
+  /* music cards */
   .track-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   /* beat cards */
@@ -838,7 +866,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
   /* header */
   .logo img {
     max-width: 120px;
@@ -856,22 +884,36 @@ body {
   }
 
   /* Hero Section */
-  .hero-content {
-    flex-direction: column; /* Stack elements on small screens */
+  .hero{
+    background-image: url(/images/kenashika_A_photo-realistic_image_of_a_black_hip-hop_artist_set_3739aa16-ce2f-4a88-b47c-f6c69a7c536d.png);
+    background-size: auto;
   }
 
-  .hero-text,
-  .hero-image {
+  .hero-content {
+    flex-direction: column; /* Stack elements on small screens */
+    opacity: 1;
+  }
+
+  .hero-img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    opacity: 0.7;
+    position: absolute;
+  }
+
+  .hero-text {
     flex: 1;
     max-width: 100%;
     text-align: center;
   }
 
-  .hero-image img {
+  /* .hero img {
     margin-top: 20px;
-    background-image: -webkit-linear-gradient(0deg, black, black),
+    background-image:
       url("/images/kenashika_A_photo-realistic_image_of_a_black_hip-hop_artist_set_3739aa16-ce2f-4a88-b47c-f6c69a7c536d.png");
-  }
+  } */
 
   /* music cards */
   .track-cards {
@@ -880,6 +922,7 @@ body {
 
   /* beat cards */
   .beat-cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   /* about section */

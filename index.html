@@ -8,7 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="/images/DreamShaper_v7_A_dynamic_logo_for_a_hiphop_music_website_incor_0-removebg-preview.png">
-    <title>NevX</title>
+    <title>NevX | Music</title>
 </head>
 <body>
     <!-- Header Section -->
@@ -16,13 +16,13 @@
     <div class="header-container">
         <h1 class="header-name"></h1>
       <!-- Logo -->
-      <!-- <div class="logo">
-          <img src="/images/DreamShaper_v7_A_dynamic_logo_for_a_hiphop_music_website_incor_0-removebg-preview.png" class="logo" alt="Music Artist Logo">
+      <div class="logo">
+        Nev<span class="nevx">X</span>
     </div>
-     -->
+    
     <!-- Navigation Menu -->
     <nav class="menu">
-        <ul>
+      <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#music">Music</a></li>
           <li><a href="#beats">Beats</a></li>
@@ -32,6 +32,8 @@
       </nav>
     </div>
   </header>
+  <hr class="nav-line">
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-img"> </div>
@@ -48,10 +50,11 @@
   <!-- Music Section -->
   <section class="music">
     <div class="music-container">
-      <h1 class="section-heading">Featured Tracks</h1>
+      <div data-aos="flip-left"><h1 class="section-heading">Featured Tracks</h1></div>
 
       <!-- Track Cards -->
-      <div class="track-cards">
+      <div data-aos="zoom-in-up" data-aos-duration="1000">
+        <div class="track-cards">
         <div class="track-card">
           <img src="/images/wave_sound-04-removebg-preview.png" alt="Track 1">
           <h3>Por Favor Mi Amor</h3>
@@ -112,6 +115,7 @@
 
         <!-- Add more track cards as needed -->
       </div>
+    </div>
       
       <!-- Call-to-Action (CTA) Button -->
       <a href="#all-music" class="music-button">Explore All Music</a>
@@ -120,54 +124,50 @@
    <!-- Beats Section -->
    <section class="beats">
     <div class="beats-container">
-      <h2 class="section-heading">Beat Store</h2>
+      <div data-aos="fade-left"><h2 class="section-heading">Beat Store</h2></div>
 
       <!-- Beat Cards -->
-      <div class="beat-cards">
+      <div data-aos="flip-up">
+        <div class="beat-cards">
         <!-- Replace the placeholder data with actual beat information -->
         <div class="beat-card">
-          <img src="path/to/beat1.jpg" alt="Beat 1">
           <h3>Beat 1 Title</h3>
           <p>Price: $29.99</p>
           <a href="#buy-now" class="beats-button">Buy Now</a>
         </div>
 
         <div class="beat-card">
-          <img src="path/to/beat2.jpg" alt="Beat 2">
           <h3>Beat 2 Title</h3>
           <p>Price: $24.99</p>
           <a href="#buy-now" class="beats-button">Buy Now</a>
         </div>
         
         <div class="beat-card">
-          <img src="path/to/beat2.jpg" alt="Beat 2">
           <h3>Beat 3 Title</h3>
           <p>Price: $24.99</p>
           <a href="#buy-now" class="beats-button">Buy Now</a>
         </div>
 
         <div class="beat-card">
-          <img src="path/to/beat2.jpg" alt="Beat 2">
           <h3>Beat 4 Title</h3>
           <p>Price: $24.99</p>
           <a href="#buy-now" class="beats-button">Buy Now</a>
         </div>
 
         <div class="beat-card">
-          <img src="path/to/beat2.jpg" alt="Beat 2">
           <h3>Beat 5 Title</h3>
           <p>Price: $24.99</p>
           <a href="#buy-now" class="beats-button">Buy Now</a>
         </div>
 
         <div class="beat-card">
-          <img src="path/to/beat2.jpg" alt="Beat 2">
           <h3>Beat 6 Title</h3>
           <p>Price: $24.99</p>
           <a href="#buy-now" class="beats-button">Buy Now</a>
         </div>
 
         <!-- Add more beat cards as needed -->
+      </div>
       </div>
     </div>
   </section>
@@ -282,7 +282,8 @@
       </p>
     </div>
   </footer>
-    
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
   <script>
     AOS.init();
   </script>

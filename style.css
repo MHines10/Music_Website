@@ -98,14 +98,53 @@ body {
 }
 
 .menu a {
+  font-size: 1rem;
   text-decoration: none;
-  color: #ffffff; /* Text color for menu links */
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  transition: .5s ease;
 }
 
+.menu a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ff5500;
+  transition: .3s ease;
+}
 .menu a:hover {
-  color: #ff5500; /* Text color on hover for menu links */
+  color: #000000;
+  font-weight: bolder;
+  transition-delay: .5s;
+}
+
+.menu a:hover::before {
+  width: 100%;
+}
+.menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ff5500;
+  border-radius: 0.4rem 0.4rem 0rem 0rem;
+  transition: .3s ease;
+  z-index: -1;
+}
+
+.menu a:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
 }
 
 /* Hero Section */
@@ -230,7 +269,7 @@ body {
 }
 
 .hero-button:hover::after {
-  animation: 1s glitch infinite;
+  animation: 1s glitch;
   animation-timing-function: steps(2, end);
   cursor: pointer;
 }

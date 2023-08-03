@@ -334,16 +334,16 @@ body {
 /* Music Section */
 .music {
   /* background-color: #1135516b; Dark background color for the music section */
-  background: #360033; /* fallback for old browsers */
+  background: #01040b; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to right,
-    #0b8793,
-    #360033
+    to top,
+    #02091b,
+    #01040b
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to right,
-    #0b8793,
-    #360033
+    to top,
+    #02091b,
+    #01040b
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   padding: 10rem 0;
@@ -578,17 +578,17 @@ body {
 
 /* Beats Section */
 .beats {
-  background-color: #113551; /* Dark background color for the beats section */
-  background: #360033; /* fallback for old browsers */
+  background-color: #02091b; /* Dark background color for the beats section */
+  background: #02091b; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to right,
-    #360033,
-    #ff932f
+    to top,
+    #030e2b,
+    #02091b
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to right,
-    #360033,
-    #ff932f
+    to top,
+    #030e2b,
+    #02091b
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   padding: 40px 0;
@@ -667,7 +667,7 @@ body {
 
 /* About Section */
 .about {
-  background-color: #000102; /* Dark background color for the about section */
+  background-color: #000102;
   padding: 40px 0;
 }
 
@@ -951,6 +951,7 @@ body {
 
 /* Styles for responsiveness */
 @media screen and (max-width: 1024px) {
+
   .hero-img {
     display: inline-block;
     width: 100%;
@@ -998,6 +999,56 @@ body {
     margin: 10px 0;
   }
 
+  .menu a {
+    font-size: 1rem;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    padding: 0.3em 0.5em;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
+  }
+  
+  .menu a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ff5500;
+    transition: .3s ease;
+  }
+  .menu a:hover {
+    color: #000000;
+    font-weight: bolder;
+    transition-delay: .5s;
+  }
+  
+  .menu a:hover::before {
+    width: 100%;
+  }
+  .menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0px;
+    width: 100%;
+    background-color: #ff5500;
+    border-radius: 0.2rem 0.2rem 0rem 0rem;
+    transition: .3s ease;
+    z-index: -1;
+  }
+  
+  .menu a:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+  }
+
   /* Hero Section */
   .hero {
     background-image: url(/images/kenashika_A_photo-realistic_image_of_a_black_hip-hop_artist_set_3739aa16-ce2f-4a88-b47c-f6c69a7c536d.png);
@@ -1023,12 +1074,6 @@ body {
     max-width: 100%;
     text-align: center;
   }
-
-  /* .hero img {
-    margin-top: 20px;
-    background-image:
-      url("/images/kenashika_A_photo-realistic_image_of_a_black_hip-hop_artist_set_3739aa16-ce2f-4a88-b47c-f6c69a7c536d.png");
-  } */
 
   /* music cards */
   .track-cards {

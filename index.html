@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -31,9 +31,9 @@
         <!-- Navigation Menu -->
         <nav class="menu">
           <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#music">Music</a></li>
-            <li><a href="#beats">Beats</a></li>
+            <li><a href="#beats-section">Beats</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -60,7 +60,7 @@
       </div>
     </section>
     <!-- Music Section -->
-    <section class="music">
+    <section class="music" id="music">
       <div class="music-container">
         <!-- AOS -->
         <div data-aos="flip-left" data-aos-duration="3000">
@@ -174,8 +174,9 @@
         <a href="#all-music" class="music-button">Explore All Music</a>
       </div>
     </section>
+
     <!-- Beats Section -->
-    <section class="beats">
+    <section class="beats" id="beats-section">
       <div class="beats-container">
         <!-- AOS -->
         <div data-aos="fade-left" data-aos-duration="2000">
@@ -183,10 +184,93 @@
         </div>
 
         <!-- Beat Cards -->
-        <div data-aos="flip-up" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+        <div
+          data-aos="flip-up"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="3000"
+        >
           <div class="beat-cards">
             <!-- Replace the placeholder data with actual beat information -->
             <div class="beat-card">
+              <h3>Beat 1 Title</h3>
+              <p>Price: $29.99</p>
+              <a href="#buy-now" class="beats-button">Buy Now</a>
+            </div>
+
+            <div class="beat-card">
+              <h3>Beat 2 Title</h3>
+              <p>Price: $24.99</p>
+              <a href="#buy-now" class="beats-button">Buy Now</a>
+            </div>
+            <div class="beat-card">
+              <h3>Beat 1 Title</h3>
+              <p>Price: $29.99</p>
+              <a href="#buy-now" class="beats-button">Buy Now</a>
+            </div>
+
+            <div class="beat-card">
+              <h3>Beat 2 Title</h3>
+              <p>Price: $24.99</p>
+              <a href="#buy-now" class="beats-button">Buy Now</a>
+            </div>
+            <div class="beat-card">
+              <h3>Beat 1 Title</h3>
+              <p>Price: $29.99</p>
+              <a href="#buy-now" class="beats-button">Buy Now</a>
+            </div>
+
+            <div class="beat-card">
+              <h3>Beat 2 Title</h3>
+              <p>Price: $24.99</p>
+              <a href="#buy-now" class="beats-button">Buy Now</a>
+            </div>
+            <div class="beat-card">
+              <h3>Beat 1 Title</h3>
+              <p>Price: $29.99</p>
+              <a href="#buy-now" class="beats-button">Buy Now</a>
+            </div>
+
+            <div class="beat-card">
+              <h3>Beat 2 Title</h3>
+              <p>Price: $24.99</p>
+              <a href="#buy-now" class="beats-button">Buy Now</a>
+            </div>
+            <div class="beat-card">
+              <h3>Beat 100 Title</h3>
+              <p>Price: $29.99</p>
+              <a href="#buy-now" class="beats-button">Buy Now</a>
+            </div>
+
+            <div class="beat-card">
+              <h3>Beat 2 Title</h3>
+              <p>Price: $24.99</p>
+              <a href="#buy-now" class="beats-button">Buy Now</a>
+            </div>
+
+            <!-- Add more beat cards as needed -->
+          </div>
+        </div>
+      </div>
+      <!-- Arrow buttons -->
+      <div class="arrow-container">
+        <div class="left-arrow">&#8249;</div>
+        <div class="right-arrow">&#8250;</div>
+      </div>
+    </section>
+
+    <!-- Beats Section -->
+    <!-- <section class="beats">
+      <div class="beats-container"> -->
+    <!-- AOS -->
+    <!-- <div data-aos="fade-left" data-aos-duration="2000">
+          <h2 class="section-heading">Beat Store</h2>
+        </div> -->
+
+    <!-- Beat Cards -->
+    <!-- <div data-aos="flip-up" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+          <div class="beat-cards"> -->
+    <!-- Replace the placeholder data with actual beat information -->
+    <!-- <div class="beat-card">
               <h3>Beat 1 Title</h3>
               <p>Price: $29.99</p>
               <a href="#buy-now" class="beats-button">Buy Now</a>
@@ -220,15 +304,16 @@
               <h3>Beat 6 Title</h3>
               <p>Price: $24.99</p>
               <a href="#buy-now" class="beats-button">Buy Now</a>
-            </div>
+            </div> -->
 
-            <!-- Add more beat cards as needed -->
-          </div>
+    <!-- Add more beat cards as needed -->
+    <!-- </div>
         </div>
       </div>
-    </section>
+    </section> -->
+
     <!-- About Section -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="about-container">
         <h2 class="section-heading">About the Artist</h2>
 
@@ -255,7 +340,7 @@
       </div>
     </section>
     <!-- Testimonials Section -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
       <div class="testimonial-container">
         <h2 class="section-heading">Testimonials</h2>
 
@@ -313,7 +398,7 @@
       </div>
     </section>
     <!-- Contact Section -->
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="contact-container">
         <h2 class="section-heading">Contact</h2>
 
@@ -384,11 +469,91 @@
         <p class="copyright">&copy; 2023 Music Artist. All rights reserved.</p>
       </div>
     </footer>
+    <!-- Go to Top Button -->
+    <div class="go-to-top" id="goToTopButton">
+      <a href="#top">Go To Top</a>
+    </div>
 
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script> -->
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
     <script src="script.js"></script>
+
+    <!-- <script>
+   $(document).ready(function() {
+     // Show/hide "Go to Top" button
+     var $goToTopButton = $("#goToTopButton");
+
+     $(window).scroll(function() {
+       if ($(this).scrollTop() > 100) {
+         $goToTopButton.fadeIn();
+       } else {
+         $goToTopButton.fadeOut();
+       }
+     });
+
+     // Scroll to top when "Go to Top" button is clicked
+     $goToTopButton.click(function(event) {
+       event.preventDefault();
+       $("html, body").animate({ scrollTop: 0 }, 800);
+     });
+
+     // Handle horizontal scrolling with arrows
+     var $beatsContainer = $(".beats-container");
+     var $leftArrow = $(".left-arrow");
+     var $rightArrow = $(".right-arrow");
+
+     var scrollAmount = 200;
+
+     $rightArrow.click(function() {
+       $beatsContainer.animate(
+         {
+           scrollLeft: "+=" + scrollAmount
+         },
+         800
+       );
+     });
+
+     $leftArrow.click(function() {
+       $beatsContainer.animate(
+         {
+           scrollLeft: "-=" + scrollAmount
+         },
+         800
+       );
+     });
+
+     // Handle horizontal scrolling with swipe on touch devices
+     $beatsContainer.swipe({
+       swipeLeft: function() {
+         $beatsContainer.animate(
+           {
+             scrollLeft: "+=" + scrollAmount
+           },
+           800
+         );
+       },
+       swipeRight: function() {
+         $beatsContainer.animate(
+           {
+             scrollLeft: "-=" + scrollAmount
+           },
+           800
+         );
+       }
+     });
+   });
+ </script> -->
   </body>
 </html>

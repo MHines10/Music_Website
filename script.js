@@ -108,4 +108,143 @@ playBtns.forEach((playBtn, index) => {
         pauseOtherPlayers(player);
       });
     });
-    
+
+
+  const scrollContainer = document.querySelector(".beats-scroll-container");
+  const leftArrow = document.querySelector(".left-arrow");
+  const rightArrow = document.querySelector(".right-arrow");
+
+  let scrollAmount = 0;
+  const scrollStep = 300; // Adjust the scroll step as needed
+
+  leftArrow.addEventListener("click", () => {
+    scrollAmount -= scrollStep;
+    scrollContainer.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
+  });
+
+  rightArrow.addEventListener("click", () => {
+    scrollAmount += scrollStep;
+    scrollContainer.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
+  });
+
+  $(document).ready(function() {
+    // Scroll by 300 pixels on each click
+    const scrollAmount = 300;
+
+    // Reference to the beats container and the arrow buttons
+    const $beatsContainer = $(".beats-container");
+    const $leftArrow = $(".left-arrow");
+    const $rightArrow = $(".right-arrow");
+
+    // Calculate the maximum scroll position
+    const maxScrollLeft = $beatsContainer.get(0).scrollWidth - $beatsContainer.outerWidth();
+
+    // Click event for the right arrow
+    $rightArrow.on("click", function() {
+      $beatsContainer.animate({ scrollLeft: "+=" + scrollAmount }, 500);
+    });
+
+    // Click event for the left arrow
+    $leftArrow.on("click", function() {
+      $beatsContainer.animate({ scrollLeft: "-=" + scrollAmount }, 500);
+    });
+
+    // Swipe event for touch screen devices
+    $beatsContainer.swipe({
+      swipeLeft: function(event, direction, distance, duration, fingerCount) {
+        $beatsContainer.animate({ scrollLeft: "+=" + scrollAmount }, 500);
+      },
+      swipeRight: function(event, direction, distance, duration, fingerCount) {
+        $beatsContainer.animate({ scrollLeft: "-=" + scrollAmount }, 500);
+      },
+      threshold: 50 // Adjust the threshold as needed
+    });
+
+    // Update arrow visibility on scroll
+    $beatsContainer.scroll(function() {
+      const currentScrollLeft = $beatsContainer.scrollLeft();
+
+      // Show/hide arrows based on scroll position
+      if (currentScrollLeft <= 0) {
+        $leftArrow.hide();
+      } else {
+        $leftArrow.show();
+      }
+
+      if (currentScrollLeft >= maxScrollLeft) {
+        $rightArrow.hide();
+      } else {
+        $rightArrow.show();
+      }
+    });
+  });
+
+  $(document).ready(function() {
+    // Show/hide "Go to Top" button
+    var $goToTopButton = $("#goToTopButton");
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        $goToTopButton.fadeIn();
+      } else {
+        $goToTopButton.fadeOut();
+      }
+    });
+
+    // Scroll to top when "Go to Top" button is clicked
+    $goToTopButton.click(function(event) {
+      event.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, 800);
+    });
+
+    // Handle horizontal scrolling with arrows
+    var $beatsContainer = $(".beats-container");
+    var $leftArrow = $(".left-arrow");
+    var $rightArrow = $(".right-arrow");
+
+    var scrollAmount = 200;
+
+    $rightArrow.click(function() {
+      $beatsContainer.animate(
+        {
+          scrollLeft: "+=" + scrollAmount
+        },
+        800
+      );
+    });
+
+    $leftArrow.click(function() {
+      $beatsContainer.animate(
+        {
+          scrollLeft: "-=" + scrollAmount
+        },
+        800
+      );
+    });
+
+    // Handle horizontal scrolling with swipe on touch devices
+    $beatsContainer.swipe({
+      swipeLeft: function() {
+        $beatsContainer.animate(
+          {
+            scrollLeft: "+=" + scrollAmount
+          },
+          800
+        );
+      },
+      swipeRight: function() {
+        $beatsContainer.animate(
+          {
+            scrollLeft: "-=" + scrollAmount
+          },
+          800
+        );
+      }
+    });
+  });

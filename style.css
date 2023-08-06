@@ -106,30 +106,30 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   position: relative;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .menu a::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 2px;
   width: 0;
   background-color: #ff5500;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 .menu a:hover {
   color: #000000;
   font-weight: bolder;
-  transition-delay: .5s;
+  transition-delay: 0.5s;
 }
 
 .menu a:hover::before {
   width: 100%;
 }
 .menu a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -137,7 +137,7 @@ body {
   width: 100%;
   background-color: #ff5500;
   border-radius: 0.4rem 0.4rem 0rem 0rem;
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: -1;
 }
 
@@ -576,20 +576,123 @@ body {
   cursor: pointer;
 }
 
+
 /* Beats Section */
 .beats {
-  background-color: #02091b; /* Dark background color for the beats section */
-  background: #02091b; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #030e2b,
-    #02091b
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #030e2b,
-    #02091b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: relative;
+  background-color: #02091b;
+  background: #02091b;
+  background: -webkit-linear-gradient(to top, #030e2b, #02091b);
+  background: linear-gradient(to top, #030e2b, #02091b);
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.beats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+}
+
+.section-heading {
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.beat-cards {
+  display: inline-flex; /* Display the beat cards in a row */
+}
+
+.beat-card {
+  background-image: -webkit-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.658),
+      rgba(0, 0, 0, 0.658)
+    ),
+    url("/images/DreamShaper_v7_music_beat_logo_0.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-right: 20px; /* Add some spacing between beat cards */
+}
+
+.beat-card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.beat-card p {
+  color: #bfbfbf;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.beats-button {
+  display: block;
+  text-align: center;
+  background-color: #ff5500;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.beats-button:hover {
+  background-color: #ff7700;
+}
+
+/* Arrow buttons */
+.arrow-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  left: 20px;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 40px;
+  height: 40px;
+  background-color: #ff5500;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  background-color: #ff7700;
+}
+
+
+
+
+
+
+/* Beats Section */
+/* .beats {
+  background-color: #02091b;
+  background: #02091b;
+  background: -webkit-linear-gradient(to top, #030e2b, #02091b);
+  background: linear-gradient(to top, #030e2b, #02091b);
 
   padding: 40px 0;
 }
@@ -600,8 +703,15 @@ body {
   padding: 20px;
 }
 
+
+.beats-scroll-container {
+  overflow: hidden;
+}
+
+
+
 .section-heading {
-  color: #ffffff; /* Text color for the section heading */
+  color: #ffffff;
   text-align: center;
   font-size: 24px;
   margin-bottom: 30px;
@@ -609,11 +719,9 @@ body {
 
 .beat-cards {
   display: grid;
-  grid-template-columns: repeat(
-    3,
-    1fr
-  ); /* Adjust the number of columns as needed */
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 4rem;
+  white-space: nowrap;
 }
 
 .beat-card {
@@ -637,13 +745,13 @@ body {
 }
 
 .beat-card h3 {
-  color: #ffffff; /* Text color for beat titles */
+  color: #ffffff;
   font-size: 18px;
   margin-top: 10px;
 }
 
 .beat-card p {
-  color: #bfbfbf; /* Text color for price information */
+  color: #bfbfbf;
   font-size: 14px;
   margin-top: 5px;
 }
@@ -651,8 +759,8 @@ body {
 .beats-button {
   display: block;
   text-align: center;
-  background-color: #ff5500; /* CTA button background color */
-  color: #ffffff; /* Text color for the CTA button */
+  background-color: #ff5500;
+  color: #ffffff;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 25px;
@@ -662,8 +770,8 @@ body {
 }
 
 .beats-button:hover {
-  background-color: #ff7700; /* CTA button background color on hover */
-}
+  background-color: #ff7700;
+} */
 
 /* About Section */
 .about {
@@ -949,9 +1057,27 @@ body {
   font-size: 14px;
 }
 
+/* Go to Top Button */
+
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff5500;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: none;
+  cursor: pointer;
+}
+
+.go-to-top a {
+  text-decoration: none;
+  color: inherit;
+} 
+
 /* Styles for responsiveness */
 @media screen and (max-width: 1024px) {
-
   .hero-img {
     display: inline-block;
     width: 100%;
@@ -1008,30 +1134,30 @@ body {
     color: #ffffff;
     text-transform: uppercase;
     position: relative;
-    transition: .5s ease;
+    transition: 0.5s ease;
   }
-  
+
   .menu a::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     height: 2px;
     width: 0;
     background-color: #ff5500;
-    transition: .3s ease;
+    transition: 0.3s ease;
   }
   .menu a:hover {
     color: #000000;
     font-weight: bolder;
-    transition-delay: .5s;
+    transition-delay: 0.5s;
   }
-  
+
   .menu a:hover::before {
     width: 100%;
   }
   .menu a::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
@@ -1039,10 +1165,10 @@ body {
     width: 100%;
     background-color: #ff5500;
     border-radius: 0.2rem 0.2rem 0rem 0rem;
-    transition: .3s ease;
+    transition: 0.3s ease;
     z-index: -1;
   }
-  
+
   .menu a:hover::after {
     height: 100%;
     transition-delay: 0.4s;
@@ -1134,4 +1260,21 @@ body {
     width: 100%;
     margin-bottom: 10px;
   }
+
+  /* Go to Top Button */
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #6b2400;
+  color: #ffffff;
+  padding: 2px 5px;
+  border-radius: 10px;
+  display: none;
+}
+
+.go-to-top a {
+  text-decoration: none;
+  color: inherit;
+}
 }

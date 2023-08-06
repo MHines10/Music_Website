@@ -109,7 +109,7 @@ playBtns.forEach((playBtn, index) => {
       });
     });
 
-
+// go to top button
   const scrollContainer = document.querySelector(".beats-scroll-container");
   const leftArrow = document.querySelector(".left-arrow");
   const rightArrow = document.querySelector(".right-arrow");

@@ -21,6 +21,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Slick Carousel -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- Tab Icon -->
     <link
       rel="icon"
@@ -444,6 +445,8 @@
     <script type="text/javascript">
       //Slick Carousel
   $('.responsive').slick({
+    autoplaySpeed: 1000,
+    autoplay: true,
     dots: true,
     infinite: false,
     speed: 300,
@@ -457,7 +460,9 @@
           slidesToScroll: 3,
           infinite: false,
           dots: true,
-          speed: 1000
+          speed: 1000,
+          autoplay: true,
+          autoplaySpeed: 1000,
         }
       },
       {
@@ -466,7 +471,9 @@
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: false,
-          speed: 1000
+          speed: 1000,
+          autoplay: true,
+          autoplaySpeed: 1000,
         }
       },
       {
@@ -476,7 +483,10 @@
           slidesToScroll: 1,
           infinite: false,
           dots: false,
-          speed: 1000
+          speed: 1000,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 1000,
         }
       }
       // You can unslick at a given breakpoint now by adding:

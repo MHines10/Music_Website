@@ -148,7 +148,7 @@ body {
 }
 
 /* menu btn */
-.menu-btn{
+.menu-btn {
   display: none;
 }
 
@@ -581,7 +581,6 @@ body {
   cursor: pointer;
 }
 
-
 /* Beats Section */
 .beats {
   position: relative;
@@ -598,7 +597,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch; 
+  -webkit-overflow-scrolling: touch;
 }
 
 .section-heading {
@@ -625,7 +624,7 @@ body {
   padding: 20px;
   text-align: center;
   border-radius: 8px;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 .beat-card h3 {
@@ -963,7 +962,7 @@ body {
   text-shadow: 0.2rem 0.1rem 0 #ff5500;
   display: none;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   transition: color 0.3 ease;
   transform: scale(1.2);
 }
@@ -971,7 +970,7 @@ body {
 .go-to-top a {
   text-decoration: none;
   color: inherit;
-} 
+}
 
 /* Styles for responsiveness */
 @media screen and (max-width: 1024px) {
@@ -1007,28 +1006,27 @@ body {
 @media screen and (max-width: 768px) {
   /* menu btn */
   /* Initially hide the navigation links */
-.menu ul {
-  display: none;
-}
+  .menu ul {
+    display: none;
+  }
 
-/* Style the menu button */
-.menu-btn {
-  display: block;
-  color: #ff5500;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-right: 2rem;
-}
+  /* Style the menu button */
+  .menu-btn {
+    display: block;
+    color: #ff5500;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 2rem;
+  }
 
-.menu-btn i.active:before {
-  content: "\f00d";
-}
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
 
-/* Show the navigation links when the 'active' class is applied */
-.menu ul.active {
-  display: block;
-}
-
+  /* Show the navigation links when the 'active' class is applied */
+  .menu ul.active {
+    display: block;
+  }
 
   /* header */
   .header-container {
@@ -1191,17 +1189,17 @@ body {
   }
 
   /* Go to Top Button */
-.go-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: #ff5500;
-  font-size: 1.6rem;
-  display: none;
-}
+  .go-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #ff5500;
+    font-size: 1.6rem;
+    display: none;
+  }
 
-.go-to-top a {
-  text-decoration: none;
-  color: inherit;
-}
+  .go-to-top a {
+    text-decoration: none;
+    color: inherit;
+  }
 }

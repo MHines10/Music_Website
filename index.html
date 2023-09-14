@@ -6,9 +6,13 @@
     <!-- main css -->
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -20,8 +24,16 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Slick Carousel -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
     <!-- Tab Icon -->
     <link
       rel="icon"
@@ -42,7 +54,7 @@
           <!-- = = = menu btn = = =  -->
           <div class="menu-btn">
             <i class="fas fa-bars"></i>
-        </div>
+          </div>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="#music">Music</a></li>
@@ -294,7 +306,6 @@
       </div>
     </section>
 
-
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
       <div class="testimonial-container">
@@ -408,15 +419,28 @@
         <!-- Social Media Links -->
         <ul class="social-links">
           <li>
-            <a href="https://www.facebook.com" target="_blank" class="social-icon"
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="social-icon"
               ><i class="fab fa-facebook-f"></i
             ></a>
           </li>
           <li>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              class="social-icon"
+              ><i class="fab fa-twitter"></i
+            ></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/xzaviuer.d/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a
+              href="https://www.instagram.com/xzaviuer.d/"
+              target="_blank"
+              class="social-icon"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </li>
           <!-- Add more social media links as needed -->
         </ul>
@@ -429,13 +453,15 @@
     <div class="go-to-top" id="goToTopButton">
       <a href="#top"><i class="fa-solid fa-caret-up"></i></a>
     </div>
-    
+
     <!-- Scripts -->
-    
 
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -443,129 +469,132 @@
       AOS.init();
     </script>
     <!-- slick-carousel js -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script type="text/javascript">
       //Slick Carousel
-  $('.responsive').slick({
-    autoplaySpeed: 1000,
-    autoplay: true,
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: false,
-          dots: true,
-          speed: 1000,
-          autoplay: true,
-          autoplaySpeed: 1000,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: false,
-          speed: 1000,
-          autoplay: true,
-          autoplaySpeed: 1000,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: false,
-          speed: 1000,
-          arrows: false,
-          autoplay: true,
-          autoplaySpeed: 1000,
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
+      $(".responsive").slick({
+        autoplaySpeed: 1000,
+        autoplay: true,
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: false,
+              dots: true,
+              speed: 1000,
+              autoplay: true,
+              autoplaySpeed: 1000,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: false,
+              speed: 1000,
+              autoplay: true,
+              autoplaySpeed: 1000,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: false,
+              speed: 1000,
+              arrows: false,
+              autoplay: true,
+              autoplaySpeed: 1000,
+            },
+          },
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ],
+      });
 
-  $('.testimonial-scroll').slick({
-    autoplaySpeed: 2000,
-    autoplay: true,
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true,
-          speed: 1000,
-          autoplay: true,
-          autoplaySpeed: 2000,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          speed: 1000,
-          autoplay: true,
-          autoplaySpeed: 2000,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-          speed: 1000,
-          arrows: false,
-          autoplay: true,
-          autoplaySpeed: 2000,
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
+      $(".testimonial-scroll").slick({
+        autoplaySpeed: 2000,
+        autoplay: true,
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: true,
+              speed: 1000,
+              autoplay: true,
+              autoplaySpeed: 2000,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              speed: 1000,
+              autoplay: true,
+              autoplaySpeed: 2000,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true,
+              speed: 1000,
+              arrows: false,
+              autoplay: true,
+              autoplaySpeed: 2000,
+            },
+          },
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ],
+      });
     </script>
     <!-- Lenis Smooth Scroll -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script>
-        // Lenis Smooth Scroll
-    
-        const lenis = new Lenis()
+      // Lenis Smooth Scroll
 
-        lenis.on('scroll', (e) => {
-        console.log(e)
-        })
+      const lenis = new Lenis();
 
-        function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-        }
+      lenis.on("scroll", (e) => {
+        console.log(e);
+      });
 
-        requestAnimationFrame(raf)
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
     </script>
 
     <!-- Main JS Script File -->

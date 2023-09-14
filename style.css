@@ -148,7 +148,9 @@ body {
 }
 
 /* menu btn */
-
+.menu-btn{
+  display: none;
+}
 
 /* Hero Section */
 .hero {

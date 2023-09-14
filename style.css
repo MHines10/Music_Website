@@ -147,6 +147,9 @@ body {
   color: aliceblue;
 }
 
+/* menu btn */
+
+
 /* Hero Section */
 .hero {
   background-image: url("/images/kenashika_A_photo-realistic_image_of_a_black_hip-hop_artist_set_3739aa16-ce2f-4a88-b47c-f6c69a7c536d.png");
@@ -1000,13 +1003,45 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  /* menu btn */
+  /* Initially hide the navigation links */
+.menu ul {
+  display: none;
+}
+
+/* Style the menu button */
+.menu-btn {
+  display: block;
+  color: #ff5500;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.menu-btn i.active:before {
+  content: "\f00d";
+}
+
+/* Show the navigation links when the 'active' class is applied */
+.menu ul.active {
+  display: block;
+}
+
+
   /* header */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .logo {
     max-width: 120px;
     text-align: center;
   }
 
   .menu {
+    display: flex;
+    align-items: center;
     float: none;
     text-align: center;
     margin-top: 10px;

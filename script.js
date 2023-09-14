@@ -126,3 +126,20 @@ playBtns.forEach((playBtn, index) => {
    event.preventDefault();
    $("html, body").animate({ scrollTop: 0 }, 800);
  });
+
+ // menu btn
+
+ // Get references to the menu button and the navigation links
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.menu ul');
+
+// Add a click event listener to the menu button
+menuBtn.addEventListener('click', () => {
+  // Toggle the 'active' class on the navigation links to show/hide them
+  navLinks.classList.toggle('active');
+});
+
+$('.menu-btn').click(function () {
+  $('.navbar .menu').toggleClass("active");
+  $('.menu-btn i').toggleClass("active");
+});

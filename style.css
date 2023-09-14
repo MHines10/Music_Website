@@ -735,7 +735,7 @@ body {
 }
 
 .testimonial-card {
-  background-color: #121212; /* Darker background color for testimonial cards */
+  background-color: #00000000; /* Darker background color for testimonial cards */
   padding: 20px;
   text-align: center;
   border-radius: 8px;

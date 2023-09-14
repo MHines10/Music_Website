@@ -593,8 +593,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   white-space: nowrap;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+  -webkit-overflow-scrolling: touch; 
 }
 
 .section-heading {
@@ -605,7 +604,7 @@ body {
 }
 
 .beat-cards {
-  display: inline-flex; /* Display the beat cards in a row */
+  display: inline-flex;
 }
 
 .beat-card {
@@ -621,7 +620,7 @@ body {
   padding: 20px;
   text-align: center;
   border-radius: 8px;
-  margin-right: 20px; /* Add some spacing between beat cards */
+  margin-right: 20px; 
 }
 
 .beat-card h3 {
@@ -652,40 +651,6 @@ body {
 .beats-button:hover {
   background-color: #ff7700;
 }
-
-/* Arrow buttons */
-.arrow-container {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  left: 20px;
-}
-
-.left-arrow,
-.right-arrow {
-  width: 40px;
-  height: 40px;
-  background-color: #ff5500;
-  color: #ffffff;
-  font-size: 24px;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  margin: 0 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.left-arrow:hover,
-.right-arrow:hover {
-  background-color: #ff7700;
-}
-
-
-
-
-
 
 /* Beats Section */
 /* .beats {

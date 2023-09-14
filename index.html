@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- main css -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <!-- AOS -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Tab Icon -->
     <link
       rel="icon"
       href="/images/DreamShaper_v7_A_dynamic_logo_for_a_hiphop_music_website_incor_0-removebg-preview.png"
@@ -189,7 +194,7 @@
           data-aos-easing="ease-out-cubic"
           data-aos-duration="3000"
         >
-          <div class="beat-cards">
+          <div class="beat-cards responsive">
             <!-- Replace the placeholder data with actual beat information -->
             <div class="beat-card">
               <h3>Beat 1 Title</h3>
@@ -252,10 +257,10 @@
         </div>
       </div>
       <!-- Arrow buttons -->
-      <div class="arrow-container">
+      <!-- <div class="arrow-container">
         <div class="left-arrow">&#8249;</div>
         <div class="right-arrow">&#8250;</div>
-      </div>
+      </div> -->
     </section>
 
     <!-- Beats Section -->
@@ -471,16 +476,62 @@
     </footer>
     <!-- Go to Top Button -->
     <div class="go-to-top" id="goToTopButton">
-      <a href="#top">Go To Top</a>
+      <a href="#top"><i class="fa-solid fa-caret-up"></i></a>
     </div>
-
+    
     <!-- Scripts -->
+    
+
+    <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <script src="script.js"></script>
+    <!-- slick-carousel js -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+      //Slick Carousel
+  $('.responsive').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+    </script>
+    <!-- Main JS Script File -->
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

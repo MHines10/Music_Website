@@ -299,7 +299,7 @@
         <h2 class="section-heading">Testimonials</h2>
 
         <!-- Testimonial Cards -->
-        <div class="testimonial-cards">
+        <div class="testimonial-cards testimonial-scroll">
           <!-- Replace the placeholder data with actual testimonials -->
           <div class="testimonial-card">
             <img
@@ -494,6 +494,58 @@
       // instead of a settings object
     ]
   });
+
+  $('.testimonial-scroll').slick({
+    autoplaySpeed: 2000,
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+          speed: 1000,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          speed: 1000,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+          speed: 1000,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
     </script>
     <!-- Lenis Smooth Scroll -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
@@ -513,7 +565,7 @@
 
         requestAnimationFrame(raf)
     </script>
-    
+
     <!-- Main JS Script File -->
     <script type="text/javascript" src="script.js"></script>
   </body>
